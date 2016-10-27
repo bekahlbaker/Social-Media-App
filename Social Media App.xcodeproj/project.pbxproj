@@ -18,6 +18,10 @@
 		27166A9F1DC1202A00A57821 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27166A9E1DC1202A00A57821 /* RoundButton.swift */; };
 		27166AA11DC121F700A57821 /* RoundedCornerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27166AA01DC121F700A57821 /* RoundedCornerButton.swift */; };
 		27166AA31DC1233E00A57821 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27166AA21DC1233E00A57821 /* TextField.swift */; };
+		27166AA51DC2618100A57821 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27166AA41DC2618100A57821 /* Bolts.framework */; };
+		27166AA71DC2619300A57821 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27166AA61DC2619300A57821 /* FBSDKCoreKit.framework */; };
+		27166AA91DC261A100A57821 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27166AA81DC261A100A57821 /* FBSDKLoginKit.framework */; };
+		27166AAB1DC261AD00A57821 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27166AAA1DC261AD00A57821 /* FBSDKShareKit.framework */; };
 		FEC1806169B423410F87E35E /* Pods_Social_Media_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94BC067C3CBC22991FD4E61B /* Pods_Social_Media_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +39,11 @@
 		27166A9E1DC1202A00A57821 /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		27166AA01DC121F700A57821 /* RoundedCornerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedCornerButton.swift; sourceTree = "<group>"; };
 		27166AA21DC1233E00A57821 /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		27166AA41DC2618100A57821 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		27166AA61DC2619300A57821 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		27166AA81DC261A100A57821 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		27166AAA1DC261AD00A57821 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		27166AAC1DC26B0600A57821 /* Social Media App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Social Media App.entitlements"; sourceTree = "<group>"; };
 		44F3038C9379FCBD6386A508 /* Pods-Social Media App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social Media App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Social Media App/Pods-Social Media App.debug.xcconfig"; sourceTree = "<group>"; };
 		5899BA6AFD581C4D5CF9CB00 /* Pods-Social Media App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social Media App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Social Media App/Pods-Social Media App.release.xcconfig"; sourceTree = "<group>"; };
 		94BC067C3CBC22991FD4E61B /* Pods_Social_Media_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Social_Media_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +55,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEC1806169B423410F87E35E /* Pods_Social_Media_App.framework in Frameworks */,
+				27166AA71DC2619300A57821 /* FBSDKCoreKit.framework in Frameworks */,
+				27166AAB1DC261AD00A57821 /* FBSDKShareKit.framework in Frameworks */,
+				27166AA91DC261A100A57821 /* FBSDKLoginKit.framework in Frameworks */,
+				27166AA51DC2618100A57821 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +95,7 @@
 		27166A7E1DC0FADC00A57821 /* Social Media App */ = {
 			isa = PBXGroup;
 			children = (
+				27166AAC1DC26B0600A57821 /* Social Media App.entitlements */,
 				27166A9B1DC11CA300A57821 /* Utilities */,
 				27166A981DC0FEEC00A57821 /* Resources */,
 				27166A971DC0FEDF00A57821 /* Controller */,
@@ -141,6 +155,10 @@
 		C9773517A1C41733830F294A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				27166AAA1DC261AD00A57821 /* FBSDKShareKit.framework */,
+				27166AA81DC261A100A57821 /* FBSDKLoginKit.framework */,
+				27166AA61DC2619300A57821 /* FBSDKCoreKit.framework */,
+				27166AA41DC2618100A57821 /* Bolts.framework */,
 				94BC067C3CBC22991FD4E61B /* Pods_Social_Media_App.framework */,
 			);
 			name = Frameworks;
@@ -181,7 +199,13 @@
 				TargetAttributes = {
 					27166A7B1DC0FADC00A57821 = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = SAWE6E694F;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -400,7 +424,12 @@
 			baseConfigurationReference = 44F3038C9379FCBD6386A508 /* Pods-Social Media App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_ENTITLEMENTS = "Social Media App/Social Media App.entitlements";
+				DEVELOPMENT_TEAM = SAWE6E694F;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Social Media App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -415,7 +444,12 @@
 			baseConfigurationReference = 5899BA6AFD581C4D5CF9CB00 /* Pods-Social Media App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_ENTITLEMENTS = "Social Media App/Social Media App.entitlements";
+				DEVELOPMENT_TEAM = SAWE6E694F;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Social Media App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

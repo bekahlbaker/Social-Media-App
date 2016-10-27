@@ -47,14 +47,19 @@
                                     <constraint firstAttribute="height" constant="150" id="b3c-xL-pvD"/>
                                 </constraints>
                                 <state key="normal" image="f"/>
+                                <connections>
+                                    <action selector="facebookBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s8R-ZN-jmQ"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sPq-bF-ZF9" customClass="TextField" customModule="Social_Media_App" customModuleProvider="target">
-                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <color key="backgroundColor" red="0.74117647058823533" green="0.74117647058823533" blue="0.74117647058823533" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fY9-hh-VOZ" customClass="TextField" customModule="Social_Media_App" customModuleProvider="target">
-                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <color key="backgroundColor" red="0.74117647060000003" green="0.74117647060000003" blue="0.74117647060000003" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -90,7 +95,7 @@
                             <constraint firstItem="1WD-R8-W15" firstAttribute="top" secondItem="2Do-7j-CcI" secondAttribute="bottom" constant="15" id="2Js-Qj-qnm"/>
                             <constraint firstItem="SnQ-7Y-tKz" firstAttribute="top" secondItem="1WD-R8-W15" secondAttribute="bottom" constant="20" id="38h-uf-0Qe"/>
                             <constraint firstAttribute="trailing" secondItem="2Do-7j-CcI" secondAttribute="trailing" id="3bL-lh-82q"/>
-                            <constraint firstItem="AT4-4u-ri6" firstAttribute="top" secondItem="fY9-hh-VOZ" secondAttribute="bottom" constant="8" id="AMh-Ve-t6N"/>
+                            <constraint firstItem="AT4-4u-ri6" firstAttribute="top" secondItem="fY9-hh-VOZ" secondAttribute="bottom" constant="15" id="AMh-Ve-t6N"/>
                             <constraint firstAttribute="trailingMargin" secondItem="AT4-4u-ri6" secondAttribute="trailing" id="Brx-vu-4cx"/>
                             <constraint firstAttribute="trailingMargin" secondItem="sPq-bF-ZF9" secondAttribute="trailing" id="HT6-dd-VHn"/>
                             <constraint firstItem="SnQ-7Y-tKz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KXn-8Q-t01"/>
