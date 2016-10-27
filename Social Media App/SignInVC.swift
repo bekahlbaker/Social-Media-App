@@ -39,6 +39,30 @@ class SignInVC: UIViewController, UITextFieldDelegate {
             }
         }
     }
+
+    @IBOutlet weak var emailField: TextField!
+    @IBOutlet weak var passwordField: TextField!
+    
+    @IBAction func signInTapped(_ sender: RoundedCornerButton) {
+        if let email = emailField.text, let password = passwordField.text {
+            FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: { (user, error) in
+                if error == nil {
+                    print("BEKAH: Email user authenticated with Firebase")
+                } else {
+                    FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
+                        if error != nil {
+                            print("BEKAH: Unable to authenticate with Firebase using email - \(error)")
+                        } else {
+                            print("BEKAH: Successfully authenticated with Firebase using email")
+                        }
+                    })
+                }
+            })
+        }
+        
+    }
+    
+    
     
     func firebaseAuthenticate(_ credential: FIRAuthCredential) {
         FIRAuth.auth()?.signIn(with: credential, completion: { (user, error) in
