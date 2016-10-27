@@ -9,3 +9,5 @@
 import UIKit
 
 //let SHADOW_GRAY = UIColor.gray.cgColor
+
+let KEY_UID = "uid"
