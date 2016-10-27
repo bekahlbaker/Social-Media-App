@@ -303,6 +303,24 @@
             </objects>
             <point key="canvasLocation" x="1012" y="122.78860569715144"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="irW-02-BW6">
+            <objects>
+                <viewController id="De5-og-dPS" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0aJ-ni-MBe"/>
+                        <viewControllerLayoutGuide type="bottom" id="HHe-J5-0aq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ydC-Fj-Ulb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.74117647060000003" green="0.74117647060000003" blue="0.74117647060000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3f6-ub-Wfr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1712" y="125"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Social-Media" width="510" height="107"/>
