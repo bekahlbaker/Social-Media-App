@@ -25,6 +25,7 @@
 		27166AAE1DC2858E00A57821 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27166AAD1DC2858E00A57821 /* FeedVC.swift */; };
 		27166AB01DC2A9DF00A57821 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27166AAF1DC2A9DF00A57821 /* CircleImage.swift */; };
 		27166AB81DC3EC8200A57821 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27166AB71DC3EC8100A57821 /* FeedCell.swift */; };
+		27166ABB1DC907EB00A57821 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27166ABA1DC907EB00A57821 /* DataService.swift */; };
 		FEC1806169B423410F87E35E /* Pods_Social_Media_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94BC067C3CBC22991FD4E61B /* Pods_Social_Media_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		27166AAD1DC2858E00A57821 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		27166AAF1DC2A9DF00A57821 /* CircleImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		27166AB71DC3EC8100A57821 /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		27166ABA1DC907EB00A57821 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		44F3038C9379FCBD6386A508 /* Pods-Social Media App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social Media App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Social Media App/Pods-Social Media App.debug.xcconfig"; sourceTree = "<group>"; };
 		5899BA6AFD581C4D5CF9CB00 /* Pods-Social Media App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social Media App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Social Media App/Pods-Social Media App.release.xcconfig"; sourceTree = "<group>"; };
 		94BC067C3CBC22991FD4E61B /* Pods_Social_Media_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Social_Media_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,6 +103,7 @@
 		27166A7E1DC0FADC00A57821 /* Social Media App */ = {
 			isa = PBXGroup;
 			children = (
+				27166AB91DC907CF00A57821 /* Services */,
 				27166AAC1DC26B0600A57821 /* Social Media App.entitlements */,
 				27166A9B1DC11CA300A57821 /* Utilities */,
 				27166A981DC0FEEC00A57821 /* Resources */,
@@ -159,6 +162,14 @@
 				27166A9C1DC11CB400A57821 /* Constants.swift */,
 			);
 			name = Utilities;
+			sourceTree = "<group>";
+		};
+		27166AB91DC907CF00A57821 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				27166ABA1DC907EB00A57821 /* DataService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 		C9773517A1C41733830F294A /* Frameworks */ = {
@@ -309,6 +320,7 @@
 				27166A821DC0FADC00A57821 /* SignInVC.swift in Sources */,
 				27166A9F1DC1202A00A57821 /* RoundButton.swift in Sources */,
 				27166AA31DC1233E00A57821 /* TextField.swift in Sources */,
+				27166ABB1DC907EB00A57821 /* DataService.swift in Sources */,
 				27166AAE1DC2858E00A57821 /* FeedVC.swift in Sources */,
 				27166AB01DC2A9DF00A57821 /* CircleImage.swift in Sources */,
 				27166A801DC0FADC00A57821 /* AppDelegate.swift in Sources */,
