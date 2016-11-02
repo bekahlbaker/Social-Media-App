@@ -206,7 +206,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="368" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SaQ-bq-mxf">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeedCell" rowHeight="368" id="vMO-Tz-lgx" customClass="FeedCell" customModule="Social_Media_App" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeedCell" id="vMO-Tz-lgx" customClass="FeedCell" customModule="Social_Media_App" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="368"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vMO-Tz-lgx" id="rR2-f5-2k0">
@@ -221,8 +221,8 @@
                                                                     <subviews>
                                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Profile-Pic" translatesAutoresizingMaskIntoConstraints="NO" id="zD5-cc-QaO" customClass="CircleImage" customModule="Social_Media_App" customModuleProvider="target">
                                                                             <constraints>
-                                                                                <constraint firstAttribute="height" constant="60" id="1vm-gl-eX4"/>
                                                                                 <constraint firstAttribute="width" constant="60" id="ggB-4a-P6q"/>
+                                                                                <constraint firstAttribute="height" constant="60" id="hJy-8W-ya2"/>
                                                                             </constraints>
                                                                         </imageView>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bekahlbaker" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BLP-br-uWF">
@@ -245,9 +245,6 @@
                                                                 </imageView>
                                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="BUb-ve-25Q">
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="height" constant="50" id="Avt-30-q1i"/>
-                                                                    </constraints>
                                                                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
