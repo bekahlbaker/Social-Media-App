@@ -22,7 +22,7 @@ class SignInVC: UIViewController, UITextFieldDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         if let _ = KeychainWrapper.standard.string(forKey: KEY_UID) {
-            print("BEKAH: ID found in Keychain.")
+            print("ID found in Keychain.")
             performSegue(withIdentifier: "toFeedVC", sender: nil)
         }
     }
@@ -38,11 +38,11 @@ class SignInVC: UIViewController, UITextFieldDelegate {
         
         facebookLogin.logIn(withReadPermissions: ["email"], from: self) { (result, error) in
             if error != nil {
-                print("BEKAH: Unable to authenticate with Facebook - \(error)")
+                print("Unable to authenticate with Facebook - \(error)")
             } else if result?.isCancelled == true {
-                print("BEKAH: User cancelled Facebook authentication")
+                print("User cancelled Facebook authentication")
             } else {
-                print("BEKAH: Successfully authenticated with Facebook")
+                print("Successfully authenticated with Facebook")
                 let credential = FIRFacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
                 self.firebaseAuthenticate(credential)
             }
@@ -56,7 +56,7 @@ class SignInVC: UIViewController, UITextFieldDelegate {
         if let email = emailField.text, let password = passwordField.text {
             FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: { (user, error) in
                 if error == nil {
-                    print("BEKAH: Email user authenticated with Firebase")
+                    print("Email user authenticated with Firebase")
                     if let user = user {
                         let userData = ["provider": user.providerID]
                         self.completeSignIn(id: user.uid, userData: userData)
@@ -64,9 +64,9 @@ class SignInVC: UIViewController, UITextFieldDelegate {
                 } else {
                     FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
                         if error != nil {
-                            print("BEKAH: Unable to authenticate with Firebase using email - \(error)")
+                            print("Unable to authenticate with Firebase using email - \(error)")
                         } else {
-                            print("BEKAH: Successfully authenticated with Firebase using email")
+                            print("Successfully authenticated with Firebase using email")
                             if let user = user {
                                  let userData = ["provider": user.providerID]
                                 self.completeSignIn(id: user.uid, userData: userData)
@@ -84,9 +84,9 @@ class SignInVC: UIViewController, UITextFieldDelegate {
     func firebaseAuthenticate(_ credential: FIRAuthCredential) {
         FIRAuth.auth()?.signIn(with: credential, completion: { (user, error) in
             if error != nil {
-                print("BEKAH: Unable to authenticate with Firebase - \(error)")
+                print("Unable to authenticate with Firebase - \(error)")
             } else {
-                print("BEKAH: Successfully autheticated with FIrebase")
+                print("Successfully autheticated with FIrebase")
                 if let user = user {
                     let userData = ["provider": credential.provider]
                     self.completeSignIn(id: user.uid, userData: userData)

@@ -35,9 +35,9 @@ class FeedCell: UITableViewCell {
             let ref = FIRStorage.storage().reference(forURL: post.imageURL)
             ref.data(withMaxSize: 2 * 1024 * 1024, completion: { (data, error) in
                 if error != nil {
-                    print("BEKAH: Unable to Download image from Firebase storage.")
+                    print("Unable to Download image from Firebase storage.")
                 } else {
-                    print("BEKAH: Image downloaded from FB Storage.")
+                    print("Image downloaded from FB Storage.")
                     if let imgData = data {
                         if let img = UIImage(data: imgData) {
                            self.postImg.image = img

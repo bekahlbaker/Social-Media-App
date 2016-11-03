@@ -14,10 +14,12 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addImage: CircleImage!
+    @IBOutlet weak var captionField: TextField!
     
     var posts = [Post]()
     var imagePicker: UIImagePickerController!
     static var imageCache: NSCache<NSString, UIImage> = NSCache()
+    var imageSelected = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,8 +84,9 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
             addImage.image = image
+            imageSelected = true
         } else {
-            print("BEKAH: A valid image was not selected.")
+            print("A valid image was not selected.")
         }
         imagePicker.dismiss(animated: true, completion: nil)
     }
@@ -91,9 +94,43 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     @IBAction func addImageTapped(_ sender: AnyObject) {
         present(imagePicker, animated: true, completion: nil)
     }
+    
+    
+    @IBAction func postBtnTapped(_ sender: AnyObject) {
+    
+        guard let caption = captionField.text, caption != "" else {
+            print("Caption must be entered")
+            return
+        }
+        guard let img = addImage.image, imageSelected == true else {
+            print("Choose an image")
+            return
+        }
+        
+        if let imgData = UIImageJPEGRepresentation(img, 0.2) {
+            
+            let imgUid = NSUUID().uuidString
+            let metadata = FIRStorageMetadata()
+            metadata.contentType = "image/jpeg"
+            
+            DataService.ds.REF_POST_IMGS.child(imgUid).put(imgData, metadata: metadata) { (metadata, error) in
+                if error != nil {
+                    print("Unable to image to Firebase")
+                } else {
+                    print("Successfully uploaded image to Firebase")
+                    let downloadUrl = metadata?.downloadURL()?.absoluteString
+                }
+            
+            }
+            
+        }
+        
+    }
+    
+    
     @IBAction func signOutTapped(_ sender: UIButton) {
         KeychainWrapper.standard.removeObject(forKey: KEY_UID)
-        print("BEKAH: User removed")
+        print("User removed")
         try! FIRAuth.auth()?.signOut()
         performSegue(withIdentifier: "goToSignInVC", sender: nil)
     }
